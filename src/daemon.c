@@ -165,7 +165,7 @@ int main(int argc, char *argv[])
 		} else if (pid == 0) {
 			execl("/bin/notify-send",
 					"Quran",
-					"Did you read your daily ward today ?");
+					"Did you read your daily ward today   ?");
 
 		}
 		sleep(delay);
