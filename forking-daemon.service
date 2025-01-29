@@ -5,8 +5,6 @@ Description=Example of forking daemon program
 Type=forking
 PIDFile=/run/daemon/daemon.pid
 ExecStart=/usr/bin/daemon \
-	--conf_file /etc/daemon/daemon.conf \
-	--log_file /var/log/daemon/daemon.log \
 	--pid_file /run/daemon/daemon.pid \
 	--daemon
 User=daemoner

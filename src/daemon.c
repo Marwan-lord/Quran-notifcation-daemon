@@ -88,21 +88,15 @@ void print_help(void)
 	printf("\n Usage: %s [OPTIONS]\n\n", app_name);
 	printf("  Options:\n");
 	printf("   -h --help                 Print this help\n");
-	printf("   -c --conf_file filename   Read configuration from the file\n");
-	printf("   -t --test_conf filename   Test configuration file\n");
-	printf("   -l --log_file  filename   Write logs to the file\n");
 	printf("   -d --daemon               Daemonize this application\n");
 	printf("   -p --pid_file  filename   PID file used by daemonized app\n");
-	printf("   -o --output_delay delay   Delay on when to dislay the notification\n");
+	printf("   -o --output_delay delay   Delay on when to display the notification\n");
 	printf("\n");
 }
 
 int main(int argc, char *argv[])
 {
 	static struct option long_options[] = {
-		{"conf_file", required_argument, 0, 'c'},
-		{"test_conf", required_argument, 0, 't'},
-		{"log_file", required_argument, 0, 'l'},
 		{"help", no_argument, 0, 'h'},
 		{"daemon", no_argument, 0, 'd'},
 		{"pid_file", required_argument, 0, 'p'},
@@ -116,7 +110,7 @@ int main(int argc, char *argv[])
 
 	app_name = argv[0];
 
-	while ((value = getopt_long(argc, argv, "c:l:t:p:o:dh", long_options, &option_index)) != -1) {
+	while ((value = getopt_long(argc, argv, "p:o:dh", long_options, &option_index)) != -1) {
 		switch (value) {
 			case 'p':
 				pid_file_name = strdup(optarg);

@@ -42,6 +42,7 @@ To build example of the daemon you have to have following tools
 
 * CMake
 * GCC/CLang
+* Nix
 
 ## Build
 
@@ -68,35 +69,11 @@ have a look at command line parameters and arguments
 
      Options:
       -h --help                 Print this help
-      -c --conf_file filename   Read configuration from the file
-      -t --test_conf filename   Test configuration file
-      -l --log_file  filename   Write logs to the file
       -d --daemon               Daemonize this application
       -p --pid_file  filename   PID file used by daemonized app
+      -o --output_delay delay   Delay on when to display the notification
 
 When you will run `./bin/daemon` with parameter `--daemon` or `-d`, then
 it will become real UNIX daemon. But this is not the way, how UNIX daemons
 are started nowdays. Some init scripts or service files are used for
 this purpose.
-
-When you use Linux distribution using systemd, then you can try start daemon using
-
-    systemctl start simple-daemon
-    systemctl status simple-daemon
-    systemctl reload simple-daemon
-    systemctl stop simple-daemon
-
-> Note: The unit files `simple-daemon.service` and `forking-daemon.service` 
-are copied to the directory `/usr/lib/systemd/system` during installation using
-`make install` command.
-
-When you use RedHat 4/5/6 or CentOS, then you can try to use init script:
-
-    cp daemon.init /etc/rc.d/init.d/daemond
-
-Then it should be possible to control daemon using:
-
-    service daemon start
-    service daemon status
-    service daemon reload
-    service daemon stop
