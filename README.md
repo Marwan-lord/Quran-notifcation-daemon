@@ -1,7 +1,7 @@
 # Example of Linux Daemon
 
 This repository contains simple example of daemon for Linux OS.
-This repository also contains examples of starting scripts.
+This repository also contains examples of starting scripts. This is not producation grade software it is meant for learning
 
 ## Requirements
 
