@@ -6,4 +6,5 @@ install_manifest.txt
 .cproject
 .project
 .settings/
+.ccls-cache/
 build/
