@@ -163,7 +163,7 @@ int main(int argc, char *argv[])
 			perror("Cannot fork");
 			exit(1);
 		} else if (pid == 0) {
-			execl("/nix/store/23nz5mjk3dj7027byc6g5avx3mfwwnqm-libnotify-0.8.3/bin/notify-send",
+			execl("/bin/notify-send",
 					"Quran",
 					"Did you read your daily ward today ?");
 

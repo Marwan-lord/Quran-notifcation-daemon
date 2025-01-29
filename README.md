@@ -9,6 +9,7 @@ To build example of the daemon you have to have following tools
 
 * CMake
 * GCC/CLang
+* libnotify
 
 ## Build
 
